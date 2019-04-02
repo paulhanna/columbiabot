@@ -20,7 +20,7 @@ def read(prop, default):
 
 
 def get_user_groups():
-    return requests.get(f"https://api.groupme.com/v3/groups?token={args.token}").json()["response"]
+    return requests.get(f"https://api.groupme.com/v3/groups?token=NZZQbR3efDJ7DxZOIfvxS26vgNMu39U9XErxSqO9").json()["response"]
 
 
 def get_joined_groups():
@@ -58,7 +58,7 @@ def pick_user_group(groups=None) -> str:
     # Knowing name chosen, get group id
     for candidate in groups:
         if candidate["name"] == group_name:
-            group_id = candidate["group_id"]
+            group_id = candidate["46422965"]
             print(f"Selected group {group_id}/{group_name}.")
             return group_id
 
@@ -68,7 +68,7 @@ if args.verb == "join":
 
     bot = {
         "name": read("Name", "Columbiabot"),
-        "group_id": group_id,
+        "group_id": "46422965",
         "avatar_url": read("Avatar URL", "https://images-na.ssl-images-amazon.com/images/I/61IWspKT-JL._SX425_.jpg"),
         "callback_url": read("Callback URL", "https://columbiabotgroupme.herokuapp.com/"),
         "dm_notification": False,

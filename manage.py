@@ -7,9 +7,9 @@ from pick import pick
 import argparse
 from groupy.client import Client
 
-parser = argparse.ArgumentParser(description="Control Yalebot directly")
+parser = argparse.ArgumentParser(description="Control Columbiabot directly")
 parser.add_argument("verb", choices=("join", "leave", "send", "purge"))
-parser.add_argument("--token", default=os.environ.get("GROUPME_ACCESS_TOKEN"))
+parser.add_argument("--token", default=os.environ.get("NZZQbR3efDJ7DxZOIfvxS26vgNMu39U9XErxSqO9"))
 parser.add_argument("--groups-file", default="groups.json")
 parser.add_argument("--users-file", default="users.txt")
 args = parser.parse_args()
